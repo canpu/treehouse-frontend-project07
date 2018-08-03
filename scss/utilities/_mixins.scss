@@ -1,0 +1,47 @@
+/* Flexbox */
+@mixin flexy($disp: flex, $dir: null, $wrap: null, $just: null,
+  $align-coaxis: null) {
+  display: $disp;
+  flex-direction: $dir;
+  flex-wrap: $wrap;
+  justify-content: $just;
+  align-items: $align-coaxis;
+}
+
+/* Media Query */
+@mixin mq($screen-type) {
+  @if $screen-type != 'mobile' and $screen-type != 'desktop' {
+    @error "#{$screen-type} is not supported by media queries.";
+  }
+  $screen-size: map-get($breakpoints, $screen-type);
+  $mobile-size: map-get($breakpoints, 'mobile');
+  @if $screen-size == $mobile-size {
+    @media(max-width: $mobile-size) {
+      @content;
+    }
+  }
+  @else {
+    @media(min-width: $screen-size) {
+      @content;
+    }
+  }
+}
+
+/* Centered */
+@mixin centered() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* BEM */
+@mixin element($element) {
+  &__#{$element} {
+    @content;
+  }
+}
+
+@mixin modifier($modifier) {
+  &--#{$modifier} {
+    @content;
+  }
+}

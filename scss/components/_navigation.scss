@@ -1,0 +1,38 @@
+.nav__ {
+  @include element("item") {
+    list-style: none;
+    width: 100%;
+    display: inline-block;
+    cursor: pointer;
+    &:first-child > * {
+      @extend %target;
+    }
+    &:nth-child(1n+2) > * {
+      @extend %nontarget;
+    }
+    & > a {
+      display: inline-block;
+      text-align: center;
+      width: 100%;
+      font-size: $font-size;
+      font-weight: $font-bd-normal;
+      text-decoration: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      border-radius: 10px;
+    }
+    &:nth-child(1n+2) {
+      margin-top: 10px;
+    }
+    @include mq('desktop') {
+      width: 20%;
+      &:nth-child(1n+2) {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+.nav__item {
+  list-style: none;
+}

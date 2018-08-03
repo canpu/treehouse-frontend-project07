@@ -1,0 +1,46 @@
+.headline {
+  @include modifier('primary') {
+    @extend %headline;
+    margin-left: 30px;
+    margin-top: 5px;
+    font-weight: $font-bd-xl;
+    color: $color-highlight;
+    width: 70%;
+    font-size: $font-size-lg;
+    @include mq('desktop') {
+      width: 100%;
+    }
+  }
+  @include modifier('secondary') {
+    @extend %headline;
+    margin-left: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    font-weight: $font-bd-normal;
+  }
+}
+
+.link {
+  @extend %link;
+}
+
+.card {
+  @include flexy($disp: flex, $dir: column, $just: space-between);
+  align-self: flex-start;
+  height: 100%;
+}
+
+.blockquote {
+  border-left: solid 10px $color-highlight;
+  padding-left: 20px;
+  margin-left: 20px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  line-height: $line-height-sm;
+  font-size: $font-size-lg;
+  font-style: italic;
+  font-weight: $font-bd-normal;
+  @include mq('desktop') {
+    margin-bottom: $button-margin;
+  }
+}

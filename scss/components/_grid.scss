@@ -1,0 +1,49 @@
+.container {
+  width: $page-width-mobile;
+  margin-bottom: $page-margin-bottom;
+  @include centered();
+  @include flexy($disp: flex, $dir: column);
+  @include mq('desktop') {
+    width: $page-width-desktop;
+  }
+}
+
+.grid {
+  @include element('row') {
+    @extend %grid;
+    align-items: stretch;
+    margin-bottom: $grid-vert-gutter;
+  }
+  @for $i from 1 through $grid-column-num {
+    @include element('col--#{$i}') {
+      @extend %grid;
+      width: get-col-width($grid-column-num);
+      color: $color-txt-grid;
+      @include mq('desktop') {
+        width: get-col-width($i);
+      }
+      & > nav {
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.centered {
+  @include centered();
+}
+
+.theme__colors {
+  border-radius: 5px;
+  @each $i, $color in $color-grid {
+    &[class*='grid__col--#{$i}'] {
+      background-color: $color;
+      height: $grid-height;
+      font-weight: $font-bd-lg;
+      margin-bottom: 5px;
+    }
+  }
+
+}

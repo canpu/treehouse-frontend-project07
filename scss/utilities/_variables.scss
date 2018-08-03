@@ -1,0 +1,59 @@
+/* Grid */
+$page-width-mobile: 90%;
+$page-width-desktop: 65%;
+$page-margin-bottom: 75px;
+$grid-column-num: 12;
+$grid-gutter: 10px;
+$grid-height: 45px;
+$grid-vert-gutter: 45px;
+
+/* Button */
+$button-width: 150px;
+$button-height: 50px;
+$button-margin: 35px;
+
+/* Breakpoints */
+$breakpoint-mobile: 480px;
+$breakpoint-desktop: 1400px;
+$breakpoints: (
+  'mobile': $breakpoint-mobile,
+  'desktop': $breakpoint-desktop,
+);
+
+/* Colors */
+$color-grid: (
+  3: rgb(222, 178, 238),
+  4: rgb(126, 230, 253),
+  5: rgb(136, 217, 160),
+  6: rgb(63, 171, 202),
+  7: rgb(236, 159, 163),
+  8: rgb(253, 159, 133),
+  12: rgb(123, 232, 209)
+);
+$color-btn: (
+  'default': rgb(81, 221, 252),
+  'success': rgb(99, 204, 130),
+  'error': rgb(228, 117, 122),
+  'warning': rgb(253, 120, 86),
+  'info': rgb(146, 124, 193)
+);
+$color-highlight: rgb(88, 225, 193);
+$color-btn-txt: white;
+$color-txt: rgb(144, 144, 144);
+$color-txt-grid: rgb(128, 128, 128);
+
+/* Fonts */
+$font-family: sans-serif, Verdana;
+$font-bd-normal: normal;
+$font-bd-lg: bold;
+$font-bd-xl: bolder;
+$font-size: 15px;
+$font-size-lg: 22px;
+$line-height: 27px;
+$line-height-sm: 25px;
+
+/* Images */
+$img-margin: 15px;
+$img-frame-color: lightgrey;
+$img-frame-gutter: 15px;
+$img-height: 180px;

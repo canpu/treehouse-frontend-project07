@@ -1,0 +1,4 @@
+/* get-col-width for .grid__col--$num */
+@function get-col-width($num) {
+  @return calc(100% / #{$grid-column-num} * #{$num} - #{$grid-gutter});
+}
