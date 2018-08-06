@@ -1,4 +1,4 @@
-/* Flexbox */
+/* Layout */
 @mixin flex($disp: flex, $dir: null, $wrap: null, $just: null,
   $align-coaxis: null) {
   display: $disp;
@@ -6,6 +6,11 @@
   flex-wrap: $wrap;
   justify-content: $just;
   align-items: $align-coaxis;
+}
+
+@mixin grid($layout: null, $columns: null) {
+  display: grid;
+  grid-template-areas: $layout;
 }
 
 /* Media Query */

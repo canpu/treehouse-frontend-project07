@@ -1,16 +1,4 @@
 .section {
-  @include modifier("small") {
-    grid-column-start:
-    &:nth-child(odd) {
-      border-right: none;
-      @include media("tablet") {
-        border-right: 1px solid $color-grid;
-      }
-    }
-  }
-}
-
-section{
   width: 100%;
   @include flex($dir: column, $just: center);
   @include allmedia("padding", $padding-section);
@@ -25,6 +13,9 @@ section{
   }
   &-daily-traffic {
     grid-area: daily-traffic;
+    @include media("tablet") {
+      border-right: 1px solid $color-grid;
+    }
   }
   &-mobile-users {
     grid-area: mobile-users;
@@ -34,36 +25,20 @@ section{
   }
   &-new-members {
     grid-area: new-members;
+    @include media("tablet") {
+      border-right: 1px solid $color-grid;
+    }
   }
   &-recent-activity {
     grid-area: recent-activity;
   }
   &-message-user {
     grid-area: message-user;
+    @include media("tablet") {
+      border-right: 1px solid $color-grid;
+    }
   }
   &-settings {
     grid-area: settings;
-  }
-}
-
-.wrapper__main {
-  display: grid;
-  width: 100%;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-areas:  "traffic"
-                        "daily-traffic"
-                        "mobile-users"
-                        "social-stats"
-                        "new-members"
-                        "recent-activity"
-                        "message-user"
-                        "settings";
-  @include media("tablet") {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-areas:  "traffic traffic"
-                          "daily-traffic mobile-users"
-                          "social-stats social-stats"
-                          "new-members recent-activity"
-                          "message-user settings";
   }
 }

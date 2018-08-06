@@ -55,8 +55,9 @@ $radius-md: 5px;
 $radius-lg: 7.5px;
 $padding-alert-slide: 15px;
 $padding-section: (
-  'mobile': 1%,
-  'tablet': 2%,
+  'mobile': 5px,
+  'tablet': 10px,
+  'desktop': 20px,
 );
 
 /* Button */
