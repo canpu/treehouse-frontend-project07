@@ -2,6 +2,7 @@
   @include element("alert") {
     @extend %icon;
     fill: $color-txt-primary;
+    cursor: pointer;
     &-container {
       position: relative;
       .dot {
@@ -18,5 +19,6 @@
   }
   @include element("nav") {
     @extend %icon;
+    cursor: pointer;
   }
 }

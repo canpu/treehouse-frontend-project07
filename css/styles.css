@@ -390,7 +390,7 @@ template {
 }
 
 /* line 5, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
-h1 {
+h1, h2, h3 {
   font-weight: normal;
 }
 
@@ -400,11 +400,11 @@ strong {
 }
 
 /* line 13, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
-main {
+body, main {
   width: 100%;
 }
 
-/* line 19, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
+/* line 20, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
 .hide {
   display: none;
 }
@@ -413,6 +413,7 @@ main {
 .profile__self {
   display: flex;
   align-items: center;
+  cursor: pointer;
   grid-area: profile-self;
   height: 40px;
 }
@@ -662,11 +663,10 @@ main {
 
 /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
 .nav {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
   width: 50px;
+  display: grid;
+  align-items: start;
+  grid-template-columns: 50px;
   background: #4d4c72;
   min-height: 100vh;
 }
@@ -685,11 +685,23 @@ main {
   }
 }
 
+@media (min-width: 768px) {
+  /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+  .nav {
+    grid-template-columns: 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+  .nav {
+    grid-template-columns: 100px;
+  }
+}
+
 /* line 51, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
 .nav__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   align-items: center;
   padding: 0;
   width: 100%;
@@ -720,13 +732,13 @@ main {
   }
 }
 
-/* line 16, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+/* line 17, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
 .nav__item[class*="nav__targeted"] {
   fill: white;
   position: relative;
 }
 
-/* line 19, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+/* line 20, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
 .nav__item[class*="nav__targeted"]::before {
   content: "";
   position: absolute;
@@ -738,7 +750,7 @@ main {
   border-top-right-radius: 4px;
 }
 
-/* line 30, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+/* line 31, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
 .nav__item:not([class*="nav__targeted"]) {
   fill: #b3b3b3;
 }
@@ -746,14 +758,15 @@ main {
 /* line 51, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
 .icon__alert {
   fill: white;
+  cursor: pointer;
 }
 
-/* line 5, F:/Github/treehouse-frontend-project07/scss/components/_images.scss */
+/* line 6, F:/Github/treehouse-frontend-project07/scss/components/_images.scss */
 .icon__alert-container {
   position: relative;
 }
 
-/* line 7, F:/Github/treehouse-frontend-project07/scss/components/_images.scss */
+/* line 8, F:/Github/treehouse-frontend-project07/scss/components/_images.scss */
 .icon__alert-container .dot {
   display: inline-block;
   position: absolute;
@@ -763,6 +776,11 @@ main {
   height: 8px;
   background: #85db81;
   border-radius: 50%;
+}
+
+/* line 51, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.icon__nav {
+  cursor: pointer;
 }
 
 /* line 57, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */

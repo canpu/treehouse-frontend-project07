@@ -1,6 +1,7 @@
 .profile {
   @include element("self") {
     @include flex($align-coaxis: center);
+    cursor: pointer;
     grid-area: profile-self;
     height: $img-size;
   }
