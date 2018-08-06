@@ -53,6 +53,7 @@ $widths-alert-slide: (
 $radius-sm: 2.5px;
 $radius-md: 5px;
 $radius-lg: 7.5px;
+$padding-main-header: 5px;
 $padding-alert-slide: 15px;
 $padding-section: (
   'mobile': 5px,
@@ -86,3 +87,9 @@ $img-size: 40px;
 
 /* Animation */
 $transition-time: 0.5s;
+
+/* Derived */
+$columns-main-header: ();
+@each $screen, $width in $gutters-header-profile {
+  $columns-main-header: map-merge($columns-main-header, ($screen: auto $icon-size $width * 2 + $img-size + 75px));
+}

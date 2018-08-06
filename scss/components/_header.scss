@@ -1,14 +1,22 @@
 .header {
   @include element("main") {
-    @include flex($dir: row, $align-coaxis: center);
     background-color: $color-bg-primary-lighter;
     font-family: $font-family-primary;
     height: $height-web-header;
     @include allmedia("padding-left", $gutters-header);
     @include allmedia("padding-right", $gutters-header);
-    .profile {
+    @include grid($layout: "webtitle icon-alert profile-self", $rows: $height-web-header - $padding-main-header * 2);
+    @include allmedia("grid-template-columns", $columns-main-header);
+    padding-top: $padding-main-header;
+    padding-bottom: $padding-main-header;
+    align-items: center;
+    .icon__alert-container {
+      grid-area: icon-alert;
+    }
+    .profile__self {
       @include allmedia("padding-left", $gutters-header-profile);
       @include allmedia("margin-left", $gutters-header-profile);
+      @include flex($dir: row, $align-coaxis: center);
       box-shadow: inset 1px 0 0 0 lighten($color-bg-primary-darker, 10%);
       & > .profile__name {
         @include allmedia("margin-left", $gutters-header-profile);
@@ -16,8 +24,9 @@
     }
   }
   @include element("webtitle") {
+    grid-area: webtitle;
+    min-width: 120px;
     font-size: $font-size-lg;
-    margin-right: auto;
     color: $color-txt-primary;
   }
   @include element("page") {

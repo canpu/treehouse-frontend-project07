@@ -8,9 +8,12 @@
   align-items: $align-coaxis;
 }
 
-@mixin grid($layout: null, $columns: null) {
+@mixin grid($layout: null, $rows: null, $columns: null, $align: null) {
   display: grid;
   grid-template-areas: $layout;
+  grid-template-rows: $rows;
+  grid-template-columns: $columns;
+  align-items: $align;
 }
 
 /* Media Query */

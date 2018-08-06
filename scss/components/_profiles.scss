@@ -1,5 +1,9 @@
 .profile {
-  @include flex($align-coaxis: center);
+  @include element("self") {
+    @include flex($align-coaxis: center);
+    grid-area: profile-self;
+    height: $img-size;
+  }
   @include element("image") {
     height: $img-size;
     width: $img-size;
