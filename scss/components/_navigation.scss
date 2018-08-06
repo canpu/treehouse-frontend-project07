@@ -15,6 +15,8 @@
     @include flex($dir: column, $just: center, $align-coaxis: center);
     width: 100%;
     list-style: none;
+    position: relative;
+    overflow: visible;
     @include allmedia("margin-top", $gutters-nav-item);
     &[class*="nav__targeted"] {
       fill: $color-txt-primary;
@@ -28,10 +30,42 @@
         border-right: 4px solid $color-scale-selected;
         border-bottom-right-radius: 4px;
         border-top-right-radius: 4px;
+        text-align: center;
       }
     }
     &:not([class*="nav__targeted"]) {
       fill: darken($color-txt-primary, 30%);
+    }
+    &::after {
+      font-family: $font-family-secondary;
+      position: absolute;
+      right: -$width-hint + 15px;
+      visibility: hidden;
+      width: $width-hint;
+      border-radius: $width-hint / 2;
+      content: attr(link);
+      background: $color-scale-selected;
+      color: $color-txt-primary;
+      opacity: 0;
+      padding: $padding-hint 0;
+      border: 0px solid rgba(brown, 0);
+      text-align: center;
+      vertical-align: -50%;
+      transition: opacity $transition-time linear,
+                  border $transition-time linear;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    &:hover {
+      &::after {
+        visibility: visible;
+        display: block;
+        opacity: 1;
+        border: 2px solid rgba(brown, 1);
+      }
     }
   }
   grid-area: navbar;
