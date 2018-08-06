@@ -1,0 +1,14 @@
+.profile {
+  @include flex($align-coaxis: center);
+  @include element("image") {
+    height: $img-size;
+    width: $img-size;
+    border: 1px solid $color-profile-border;
+    border-radius: 50%;
+  }
+  @include element("name") {
+    display: inline-block;
+    color: $color-txt-primary;
+    font-size: $font-size-md;
+  }
+}

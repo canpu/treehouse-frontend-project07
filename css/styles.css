@@ -1,1 +1,913 @@
-.link{text-decoration:none;color:#51ddfc;font-weight:bold;text-align:center;cursor:pointer}.headline--primary,.headline--secondary{margin-right:auto;color:#909090}.nav____item:first-child>*{color:white;background-color:#58e1c1}.nav____item:nth-child(1n+2)>*{color:#909090;background-color:transparent}.grid__row,.grid__col--1,.grid__col--2,.grid__col--3,.grid__col--4,.grid__col--5,.grid__col--6,.grid__col--7,.grid__col--8,.grid__col--9,.grid__col--10,.grid__col--11,.grid__col--12{display:flex;flex-wrap:wrap;justify-content:space-around;align-items:center;width:100%}.img--logo,.img--frame,.img--avatar{margin:15px}/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */html{line-height:1.15;-webkit-text-size-adjust:100%}body{margin:0}h1{font-size:2em;margin:0.67em 0}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace, monospace;font-size:1em}a{background-color:transparent}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace, monospace;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-0.25em}sup{top:-0.5em}img{border-style:none}button,input,optgroup,select,textarea{font-family:inherit;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,[type="button"],[type="reset"],[type="submit"]{-webkit-appearance:button}button::-moz-focus-inner,[type="button"]::-moz-focus-inner,[type="reset"]::-moz-focus-inner,[type="submit"]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type="button"]:-moz-focusring,[type="reset"]:-moz-focusring,[type="submit"]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:0.35em 0.75em 0.625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{vertical-align:baseline}textarea{overflow:auto}[type="checkbox"],[type="radio"]{box-sizing:border-box;padding:0}[type="number"]::-webkit-inner-spin-button,[type="number"]::-webkit-outer-spin-button{height:auto}[type="search"]{-webkit-appearance:textfield;outline-offset:-2px}[type="search"]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details{display:block}summary{display:list-item}template{display:none}[hidden]{display:none}*{box-sizing:border-box;font-family:sans-serif,Verdana}ul{display:flex;flex-direction:row;flex-wrap:wrap;justify-content:space-around;margin-left:auto;margin-right:auto;align-items:center;padding-left:0;padding-right:0;width:100%}@media (min-width: 1400px){ul{width:80%}}p{font-size:15px;line-height:25px}.container{width:90%;margin-bottom:75px;margin-left:auto;margin-right:auto;display:flex;flex-direction:column}@media (min-width: 1400px){.container{width:65%}}.grid__row{align-items:stretch;margin-bottom:45px}.grid__col--1{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--1{width:calc(100% / 12 * 1 - 10px)}}.grid__col--1>nav{align-items:center;justify-content:center;width:100%}.grid__col--2{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--2{width:calc(100% / 12 * 2 - 10px)}}.grid__col--2>nav{align-items:center;justify-content:center;width:100%}.grid__col--3{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--3{width:calc(100% / 12 * 3 - 10px)}}.grid__col--3>nav{align-items:center;justify-content:center;width:100%}.grid__col--4{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--4{width:calc(100% / 12 * 4 - 10px)}}.grid__col--4>nav{align-items:center;justify-content:center;width:100%}.grid__col--5{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--5{width:calc(100% / 12 * 5 - 10px)}}.grid__col--5>nav{align-items:center;justify-content:center;width:100%}.grid__col--6{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--6{width:calc(100% / 12 * 6 - 10px)}}.grid__col--6>nav{align-items:center;justify-content:center;width:100%}.grid__col--7{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--7{width:calc(100% / 12 * 7 - 10px)}}.grid__col--7>nav{align-items:center;justify-content:center;width:100%}.grid__col--8{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--8{width:calc(100% / 12 * 8 - 10px)}}.grid__col--8>nav{align-items:center;justify-content:center;width:100%}.grid__col--9{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--9{width:calc(100% / 12 * 9 - 10px)}}.grid__col--9>nav{align-items:center;justify-content:center;width:100%}.grid__col--10{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--10{width:calc(100% / 12 * 10 - 10px)}}.grid__col--10>nav{align-items:center;justify-content:center;width:100%}.grid__col--11{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--11{width:calc(100% / 12 * 11 - 10px)}}.grid__col--11>nav{align-items:center;justify-content:center;width:100%}.grid__col--12{width:calc(100% / 12 * 12 - 10px);color:gray}@media (min-width: 1400px){.grid__col--12{width:calc(100% / 12 * 12 - 10px)}}.grid__col--12>nav{align-items:center;justify-content:center;width:100%}.centered{margin-left:auto;margin-right:auto}.theme__colors{border-radius:5px}.theme__colors[class*='grid__col--3']{background-color:#deb2ee;height:45px;font-weight:bold;margin-bottom:5px}.theme__colors[class*='grid__col--4']{background-color:#7ee6fd;height:45px;font-weight:bold;margin-bottom:5px}.theme__colors[class*='grid__col--5']{background-color:#88d9a0;height:45px;font-weight:bold;margin-bottom:5px}.theme__colors[class*='grid__col--6']{background-color:#3fabca;height:45px;font-weight:bold;margin-bottom:5px}.theme__colors[class*='grid__col--7']{background-color:#ec9fa3;height:45px;font-weight:bold;margin-bottom:5px}.theme__colors[class*='grid__col--8']{background-color:#fd9f85;height:45px;font-weight:bold;margin-bottom:5px}.theme__colors[class*='grid__col--12']{background-color:#7be8d1;height:45px;font-weight:bold;margin-bottom:5px}.headline--primary{margin-left:30px;margin-top:5px;font-weight:bolder;color:#58e1c1;width:70%;font-size:22px}@media (min-width: 1400px){.headline--primary{width:100%}}.headline--secondary{margin-left:10px;margin-top:30px;margin-bottom:15px;font-weight:normal}.card{display:flex;flex-direction:column;justify-content:space-between;align-self:flex-start;height:100%}.blockquote{border-left:solid 10px #58e1c1;padding-left:20px;margin-left:20px;border-top-left-radius:5px;border-bottom-left-radius:5px;line-height:25px;font-size:22px;font-style:italic;font-weight:normal}@media (min-width: 1400px){.blockquote{margin-bottom:35px}}.nav____item{list-style:none;width:100%;display:inline-block;cursor:pointer}.nav____item>a{display:inline-block;text-align:center;width:100%;font-size:15px;font-weight:normal;text-decoration:none;padding-top:10px;padding-bottom:10px;border-radius:10px}.nav____item:nth-child(1n+2){margin-top:10px}@media (min-width: 1400px){.nav____item{width:20%}.nav____item:nth-child(1n+2){margin-top:0}}.nav__item{list-style:none}.img--frame{padding:15px;border:0.5px solid #d3d3d3;height:180px;max-width:406px}.img--avatar{height:180px;width:180px;margin-left:auto;margin-right:auto;max-width:210px}.profile__image{border-radius:50%}.nav__icon{fill:red;width:100px;height:100px;background:none}.btn--default{width:100%;height:50px;box-shadow:none;border:none;text-transform:uppercase;font-weight:bold;color:#fff;transition:font-size 0.75s ease, font-weight 0.4s ease;cursor:pointer;align-self:center;margin-bottom:35px}@media (min-width: 1400px){.btn--default{width:150px}}.btn--default:active{font-size:125%}.btn--success{width:100%;height:50px;box-shadow:none;border:none;text-transform:uppercase;font-weight:bold;color:#fff;transition:font-size 0.75s ease, font-weight 0.4s ease;cursor:pointer;align-self:center;margin-bottom:35px}@media (min-width: 1400px){.btn--success{width:150px}}.btn--success:active{font-size:125%}.btn--error{width:100%;height:50px;box-shadow:none;border:none;text-transform:uppercase;font-weight:bold;color:#fff;transition:font-size 0.75s ease, font-weight 0.4s ease;cursor:pointer;align-self:center;margin-bottom:35px}@media (min-width: 1400px){.btn--error{width:150px}}.btn--error:active{font-size:125%}.btn--warning{width:100%;height:50px;box-shadow:none;border:none;text-transform:uppercase;font-weight:bold;color:#fff;transition:font-size 0.75s ease, font-weight 0.4s ease;cursor:pointer;align-self:center;margin-bottom:35px}@media (min-width: 1400px){.btn--warning{width:150px}}.btn--warning:active{font-size:125%}.btn--info{width:100%;height:50px;box-shadow:none;border:none;text-transform:uppercase;font-weight:bold;color:#fff;transition:font-size 0.75s ease, font-weight 0.4s ease;cursor:pointer;align-self:center;margin-bottom:35px}@media (min-width: 1400px){.btn--info{width:150px}}.btn--info:active{font-size:125%}.theme__colors[class*='btn--default']{background-color:#51ddfc}.theme__colors[class*='btn--default']:hover{background-color:#04bbe3}.theme__colors[class*='btn--success']{background-color:#63cc82}.theme__colors[class*='btn--success']:hover{background-color:#329750}.theme__colors[class*='btn--error']{background-color:#e4757a}.theme__colors[class*='btn--error']:hover{background-color:#cb282f}.theme__colors[class*='btn--warning']{background-color:#fd7856}.theme__colors[class*='btn--warning']:hover{background-color:#ea3203}.theme__colors[class*='btn--info']{background-color:#927cc1}.theme__colors[class*='btn--info']:hover{background-color:#5e4592}.form{width:100%;align-self:flex-start;height:100%;display:flex;flex-direction:column;justify-content:space-between}.form__label--hidden{visibility:hidden}.form__input{border-top:none;border-left:none;border-right:none;border-bottom:3px solid #58e1c1;padding-bottom:10px;padding-left:10px;width:90%}.form__input:last-of-type{margin-bottom:30px}.form__input::placeholder{display:inline-block;color:#838383;font-weight:bold}.form__input:focus{outline:none;border-bottom:3px solid #20b391}
+/* Breakpoints */
+/* Sizes */
+/* Button */
+/* Colors */
+/* Fonts */
+/* Images */
+/* Animation */
+/* Flexbox */
+/* Media Query */
+/* BEM */
+/* line 1, F:/Github/treehouse-frontend-project07/scss/utilities/_placeholders.scss */
+.icon__alert, .icon__nav {
+  display: block;
+  max-width: 30px;
+  max-height: 30px;
+  width: auto;
+  height: auto;
+  background: none;
+}
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+/* line 11, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+/* line 23, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+body {
+  margin: 0;
+}
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+/* line 32, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+/* line 45, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 56, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+/* line 68, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+a {
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+/* line 77, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+/* line 87, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+/* line 97, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+/* line 108, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+/* line 117, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 125, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 129, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+/* line 140, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+img {
+  border-style: none;
+}
+
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+/* line 152, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+/* line 168, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+button,
+input {
+  /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+/* line 178, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+button,
+select {
+  /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Correct the inability to style clickable types in iOS and Safari.
+ */
+/* line 187, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+/* line 198, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+/* line 210, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+/* line 221, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+/* line 232, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+/* line 245, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+/* line 253, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+/* line 262, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+/* line 272, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+/* line 282, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+/* line 291, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+/* line 300, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+}
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+/* line 312, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+details {
+  display: block;
+}
+
+/*
+ * Add the correct display in all browsers.
+ */
+/* line 320, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+summary {
+  display: list-item;
+}
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+/* line 331, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+template {
+  display: none;
+}
+
+/**
+ * Add the correct display in IE 10.
+ */
+/* line 339, F:/Github/treehouse-frontend-project07/scss/base/normalize.css */
+[hidden] {
+  display: none;
+}
+
+/* line 1, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
+* {
+  box-sizing: border-box;
+}
+
+/* line 5, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
+h1 {
+  font-weight: normal;
+}
+
+/* line 9, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
+strong {
+  font-weight: bolder;
+}
+
+/* line 13, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
+main {
+  width: 100%;
+}
+
+/* line 19, F:/Github/treehouse-frontend-project07/scss/base/_base.scss */
+.hide {
+  display: none;
+}
+
+/* line 1, F:/Github/treehouse-frontend-project07/scss/components/_typography.scss */
+.vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+/* line 5, F:/Github/treehouse-frontend-project07/scss/components/_typography.scss */
+.horizontal {
+  display: flex;
+  flex-direction: row;
+}
+
+/* line 1, F:/Github/treehouse-frontend-project07/scss/components/_profiles.scss */
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.profile__image {
+  height: 40px;
+  width: 40px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.profile__name {
+  display: inline-block;
+  color: white;
+  font-size: 16px;
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.header__main {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #7477bf;
+  font-family: "Open Sans", sans-serif;
+  height: 55px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+@media (min-width: 768px) {
+  /* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+  .header__main {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+  .header__main {
+    padding-left: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+  .header__main {
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+  .header__main {
+    padding-right: 40px;
+  }
+}
+
+/* line 9, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+.header__main .profile {
+  padding-left: 10px;
+  margin-left: 10px;
+  box-shadow: inset 1px 0 0 0 #626091;
+}
+
+@media (min-width: 768px) {
+  /* line 9, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__main .profile {
+    padding-left: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 9, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__main .profile {
+    padding-left: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 9, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__main .profile {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 9, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__main .profile {
+    margin-left: 20px;
+  }
+}
+
+/* line 13, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+.header__main .profile > .profile__name {
+  margin-left: 10px;
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__main .profile > .profile__name {
+    margin-left: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 13, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__main .profile > .profile__name {
+    margin-left: 20px;
+  }
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.header__webtitle {
+  font-size: 24px;
+  margin-right: auto;
+  color: white;
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.header__page {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+/* line 28, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+.header__page .wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-grow: 10;
+  height: 100%;
+  background: whitesmoke;
+  border-left: 1px solid #d7d7d7;
+  border-bottom: 1px solid #d7d7d7;
+}
+
+/* line 35, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+.header__page .wrapper .searchbox {
+  width: 150px;
+  margin-right: 20px;
+  border: 1.25px solid #d7d7d7;
+  border-radius: 5px;
+  font-size: 12px;
+  height: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-image: url("../icons/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: right 10.5px bottom 50%;
+  background-color: white;
+  background-size: 20px;
+  transition: box-shadow 0.5s ease-out, color 0.5s ease-out, font-size 0.5s ease-out;
+}
+
+@media (min-width: 768px) {
+  /* line 35, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__page .wrapper .searchbox {
+    width: 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 35, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__page .wrapper .searchbox {
+    width: 250px;
+  }
+}
+
+@media (min-width: 768px) {
+  /* line 35, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__page .wrapper .searchbox {
+    margin-right: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 35, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+  .header__page .wrapper .searchbox {
+    margin-right: 40px;
+  }
+}
+
+/* line 52, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+.header__page .wrapper .searchbox:focus {
+  outline: none;
+  box-shadow: 0 0 1.75px #7e7e7e;
+  color: #7477bf;
+  font-size: 16px;
+}
+
+/* line 58, F:/Github/treehouse-frontend-project07/scss/components/_header.scss */
+.header__page .wrapper .searchbox::placeholder {
+  font-weight: normal;
+  color: #d7d7d7;
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.header__pagetitle {
+  flex-grow: 1;
+  margin: 0;
+  font-weight: 400;
+  font-size: 24px;
+  min-width: 150px;
+  text-align: center;
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.header__sectiontitle {
+  text-align: left;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+/* line 1, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+.nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 50px;
+  background: #4d4c72;
+  min-height: 100vh;
+}
+
+@media (min-width: 768px) {
+  /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+  .nav {
+    width: 75px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+  .nav {
+    width: 100px;
+  }
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.nav__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.nav__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  list-style: none;
+  margin-top: 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+  .nav__item {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+  .nav__item {
+    margin-top: 25px;
+  }
+}
+
+/* line 16, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+.nav__item[class*="nav__targeted"] {
+  fill: white;
+  position: relative;
+}
+
+/* line 19, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+.nav__item[class*="nav__targeted"]::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 150%;
+  width: 0;
+  border-right: 4px solid #85db81;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+/* line 30, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
+.nav__item:not([class*="nav__targeted"]) {
+  fill: #b3b3b3;
+}
+
+/* line 43, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.icon__alert {
+  fill: white;
+}
+
+/* line 5, F:/Github/treehouse-frontend-project07/scss/components/_images.scss */
+.icon__alert-container {
+  position: relative;
+}
+
+/* line 7, F:/Github/treehouse-frontend-project07/scss/components/_images.scss */
+.icon__alert-container .dot {
+  display: inline-block;
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  width: 8px;
+  height: 8px;
+  background: #85db81;
+  border-radius: 50%;
+}
+
+/* line 49, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.button--close {
+  display: inline-block;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: transform 0.5s linear, color 0.5s linear;
+}
+
+/* line 8, F:/Github/treehouse-frontend-project07/scss/components/_buttons.scss */
+.button--close:hover {
+  transform: scale(1.25);
+}
+
+/* line 11, F:/Github/treehouse-frontend-project07/scss/components/_buttons.scss */
+.button--close:active {
+  color: #bfbfbf;
+}
+
+/* line 49, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.section--small {
+  grid-column-start: .section--small;
+}
+
+/* line 4, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+.section--small :nth-child(odd) {
+  border-right: none;
+}
+
+@media (min-width: 768px) {
+  /* line 4, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+  .section--small :nth-child(odd) {
+    border-right: 1px solid #d7d7d7;
+  }
+}
+
+/* line 13, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1%;
+}
+
+@media (min-width: 768px) {
+  /* line 13, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+  section {
+    padding: 2%;
+  }
+}
+
+/* line 17, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+section:not(:first-of-type) {
+  border-top: 1px solid #d7d7d7;
+}
+
+/* line 23, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+#section-traffic {
+  grid-area: traffic;
+}
+
+/* line 26, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+#section-daily-traffic {
+  grid-area: daily-traffic;
+}
+
+/* line 29, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+#section-mobile-users {
+  grid-area: mobile-users;
+}
+
+/* line 32, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+#section-social-stats {
+  grid-area: social-stats;
+}
+
+/* line 35, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+#section-new-members {
+  grid-area: new-members;
+}
+
+/* line 38, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+#section-recent-activity {
+  grid-area: recent-activity;
+}
+
+/* line 41, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+#section-message-user {
+  grid-area: message-user;
+}
+
+/* line 44, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+#section-settings {
+  grid-area: settings;
+}
+
+/* line 49, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+.wrapper__main {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-areas: "traffic" "daily-traffic" "mobile-users" "social-stats" "new-members" "recent-activity" "message-user" "settings";
+}
+
+@media (min-width: 768px) {
+  /* line 49, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+  .wrapper__main {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "traffic traffic" "daily-traffic mobile-users" "social-stats social-stats" "new-members recent-activity" "message-user settings";
+  }
+}
+
+/* line 1, F:/Github/treehouse-frontend-project07/scss/components/_alert.scss */
+.alert__slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  font-weight: normal;
+  font-family: "Open Sans", sans-serif;
+  width: 97.5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 7.5px;
+  text-align: left;
+  color: white;
+  background-color: #7477bf;
+  border-radius: 7.5px;
+  padding: 3.75px 15px;
+}
+
+@media (min-width: 768px) {
+  /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_alert.scss */
+  .alert__slide {
+    width: 96%;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_alert.scss */
+  .alert__slide {
+    width: 94.5%;
+  }
+}
+
+/* line 16, F:/Github/treehouse-frontend-project07/scss/components/_alert.scss */
+.alert__slide p {
+  width: 100%;
+  display: inline-block;
+}
+
+/* line 19, F:/Github/treehouse-frontend-project07/scss/components/_alert.scss */
+.alert__slide p strong {
+  margin-right: 7.5px;
+}
+
+/* line 23, F:/Github/treehouse-frontend-project07/scss/components/_alert.scss */
+.alert__slide .button--close {
+  margin-left: 15px;
+}
+
+/*# sourceMappingURL=../css/styles.map */

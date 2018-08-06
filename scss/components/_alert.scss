@@ -1,0 +1,26 @@
+.alert__slide {
+  @include flex($dir: row, $just: space-between, $align-coaxis: center);
+  font-size: $font-size-md;
+  font-weight: normal;
+  font-family: $font-family-primary;
+  @include allmedia("width", $widths-alert-slide);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: $gutter-alert-slide;
+  margin-bottom: $gutter-alert-slide / 2;
+  text-align: left;
+  color: $color-txt-primary;
+  background-color: $color-bg-primary-lighter;
+  border-radius: $radius-lg;
+  padding: $padding-alert-slide / 4 $padding-alert-slide;
+  p {
+    width: 100%;
+    display: inline-block;
+    strong {
+      margin-right: $padding-alert-slide / 2;
+    }
+  }
+  .button--close {
+    margin-left: $padding-alert-slide;
+  }
+}

@@ -1,5 +1,5 @@
 /* Flexbox */
-@mixin flexy($disp: flex, $dir: null, $wrap: null, $just: null,
+@mixin flex($disp: flex, $dir: null, $wrap: null, $just: null,
   $align-coaxis: null) {
   display: $disp;
   flex-direction: $dir;
@@ -9,8 +9,8 @@
 }
 
 /* Media Query */
-@mixin mq($screen-type) {
-  @if $screen-type != 'mobile' and $screen-type != 'desktop' {
+@mixin media($screen-type) {
+  @if $screen-type != 'mobile' and $screen-type != 'tablet' and $screen-type != 'desktop' {
     @error "#{$screen-type} is not supported by media queries.";
   }
   $screen-size: map-get($breakpoints, $screen-type);
@@ -27,10 +27,15 @@
   }
 }
 
-/* Centered */
-@mixin centered() {
-  margin-left: auto;
-  margin-right: auto;
+@mixin allmedia($property, $values) {
+  #{$property}: #{map-get($values, 'mobile')};
+  @each $screen-type in $screen-types {
+    @if $screen-type != 'mobile' {
+        @include media($screen-type) {
+          #{$property}: #{map-get($values, $screen-type)};
+        }
+      }
+    }
 }
 
 /* BEM */

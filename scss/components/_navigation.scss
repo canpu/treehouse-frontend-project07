@@ -1,38 +1,34 @@
-.nav__ {
-  @include element("item") {
-    list-style: none;
+.nav {
+  @include flex($dir: column, $just: flex-start, $align-coaxis: center);
+  @include allmedia("width", $widths-nav);
+  background: $color-bg-primary-darker;
+  min-height: 100vh;
+  @include element("list") {
+    @include flex($dir: column, $just: center, $align-coaxis: center);
+    padding: 0;
     width: 100%;
-    display: inline-block;
-    cursor: pointer;
-    &:first-child > * {
-      @extend %target;
-    }
-    &:nth-child(1n+2) > * {
-      @extend %nontarget;
-    }
-    & > a {
-      display: inline-block;
-      text-align: center;
-      width: 100%;
-      font-size: $font-size;
-      font-weight: $font-bd-normal;
-      text-decoration: none;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      border-radius: 10px;
-    }
-    &:nth-child(1n+2) {
-      margin-top: 10px;
-    }
-    @include mq('desktop') {
-      width: 20%;
-      &:nth-child(1n+2) {
-        margin-top: 0;
+  }
+  @include element("item") {
+    @include flex($dir: column, $just: center, $align-coaxis: center);
+    width: 100%;
+    list-style: none;
+    @include allmedia("margin-top", $gutters-nav-item);
+    &[class*="nav__targeted"] {
+      fill: $color-txt-primary;
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        left: 0;
+        height: 150%;
+        width: 0;
+        border-right: 4px solid $color-scale-selected;
+        border-bottom-right-radius: 4px;
+        border-top-right-radius: 4px;
       }
     }
+    &:not([class*="nav__targeted"]) {
+      fill: darken($color-txt-primary, 30%);
+    }
   }
-}
-
-.nav__item {
-  list-style: none;
 }

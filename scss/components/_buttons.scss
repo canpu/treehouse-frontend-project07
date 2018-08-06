@@ -1,35 +1,16 @@
-.btn {
-  @each $btn, $color in $color-btn {
-    @include modifier('#{$btn}') {
-      width: 100%;
-      height: $button-height;
-      box-shadow: none;
-      border: none;
-      text-transform: uppercase;
-      font-weight: $font-bd-lg;
-      color: $color-btn-txt;
-      transition: font-size 0.75s ease,
-                  font-weight 0.4s ease;
-      cursor: pointer;
-      align-self: center;
-      margin-bottom: $button-margin;
-      @include mq('desktop') {
-        width: $button-width;
-      }
-      &:active {
-        font-size: 125%;
-      }
+.button {
+  @include modifier("close") {
+    display: inline-block;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: transform $transition-time linear,
+                color $transition-time linear;
+    &:hover {
+      transform: scale(1.25);
     }
-  }
-}
+    &:active {
+      color: darken($color-txt-primary, 25%);
+    }
 
-.theme__colors {
-  @each $btn, $color in $color-btn {
-    &[class*='btn--#{$btn}'] {
-      background-color: $color;
-      &:hover {
-        background-color: darken($color, 20%);
-      }
-    }
   }
 }

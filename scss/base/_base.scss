@@ -1,22 +1,21 @@
 * {
   box-sizing: border-box;
-  font-family: $font-family;
 }
 
-ul {
-  @include flexy($disp: flex, $dir: row, $wrap: wrap, $just: space-around);
-  @include centered;
-  align-items: center;
-  padding-left: 0;
-  padding-right: 0;
+h1 {
+  font-weight: normal;
+}
+
+strong {
+  font-weight: bolder;
+}
+
+main {
   width: 100%;
-  @include mq('desktop') {
-    width: 80%;
-  }
 }
 
-p {
-  font-size: $font-size;
-  line-height: 25px;
 
+
+.hide {
+  display: none;
 }

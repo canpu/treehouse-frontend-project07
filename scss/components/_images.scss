@@ -1,34 +1,22 @@
-.img {
-  @include modifier('logo') {
-    @extend %img;
+.icon {
+  @include element("alert") {
+    @extend %icon;
+    fill: $color-txt-primary;
+    &-container {
+      position: relative;
+      .dot {
+        display: inline-block;
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        width: 8px;
+        height: 8px;
+        background: $color-scale-selected;
+        border-radius: 50%;
+      }
+    }
   }
-  @include modifier('frame') {
-    @extend %img;
-    padding: $img-frame-gutter;
-    border: 0.5px solid $img-frame-color;
-    height: $img-height;
-    max-width: 406px;
+  @include element("nav") {
+    @extend %icon;
   }
-  @include modifier('avatar') {
-    @extend %img;
-    height: $img-height;
-    width: $img-height;
-    @include centered;
-    max-width: 210px;
-  }
-}
-
-
-
-
-.profile__image {
-  border-radius: 50%;
-}
-
-
-.nav__icon {
-  fill: red;
-  width: 100px;
-  height: 100px;
-  background: none;
 }
