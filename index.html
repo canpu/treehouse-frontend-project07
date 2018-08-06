@@ -140,7 +140,7 @@
       <div class="alert__slide">
         <p>
           <strong>Alert</strong>
-          Nullman quis risus eget urna mollis ornare vel eu leo. Nullman id dolor id nibh ultricies vehicula ut id elit. Curabitur blandit tempus porttitor.
+          You need to renew your membership.
         </p>
         <span class="button--close">X</span>
       </div>
@@ -149,18 +149,24 @@
         <section class="section" id="section-traffic">
           <header class="header__section">
             <h3 class="header__sectiontitle">TRAFFIC</h3>
-
+            <div class="scale--option">Hourly</div>
+            <div class="scale--option">Daily</div>
+            <div class="scale--option scale--selected">Weekly</div>
+            <div class="scale--option">Monthly</div>
           </header>
+          <canvas class="chart" id="chart-traffic" height="75"></canvas>
         </section>
         <section class="section" id="section-daily-traffic">
           <header class="header__section">
             <h3 class="header__sectiontitle">DAILY TRAFFIC</h3>
           </header>
+          <canvas class="chart" id="chart-daily-traffic"></canvas>
         </section>
         <section class="section" id="section-mobile-users">
           <header class="header__section">
             <h3 class="header__sectiontitle">MOBILE USERS</h3>
           </header>
+          <canvas class="chart" id="chart-mobile"></canvas>
         </section>
         <section class="section" id="section-social-stats">
           <header class="header__section">

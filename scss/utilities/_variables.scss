@@ -35,6 +35,8 @@ $margin-searchbox: 10px;
 $height-searchbox: 30px;
 $height-web-header: 55px;
 $height-page-header: 50px;
+$height-section-header: 40px;
+$height-traffic-canvas: 320px;
 $width-hint: 150px;
 $widths-nav: (
   'mobile': 50px,
@@ -50,6 +52,11 @@ $widths-alert-slide: (
   'mobile': 97.5%,
   'tablet': 96%,
   'desktop': 94.5%,
+);
+$paddings-scale: (
+  'mobile': 5px,
+  'tablet': 10px,
+  'desktop': 15px,
 );
 $radius-sm: 2.5px;
 $radius-md: 5px;
@@ -100,3 +107,7 @@ $columns-body: ();
   $columns-body: map-merge($columns-body, ($screen: $width auto));
 }
 $rows-body: $height-web-header auto;
+$radius-scale: ();
+@each $screen, $padding in $paddings-scale {
+  $radius-scale: map-merge($radius-scale, ($screen: $font-size-md / 2 + $padding));
+}

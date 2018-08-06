@@ -5,11 +5,40 @@
   &:not(:first-of-type) {
     border-top: 1px solid $color-grid;
   }
+  @include grid($rows: $height-section-header auto);
 }
 
 #section {
   &-traffic {
     grid-area: traffic;
+    .header__section {
+      @include flex($dir: row, $just: space-between, $align-coaxis: center);
+      .header__sectiontitle {
+        margin-right: auto;
+      }
+      .scale--option {
+        cursor: pointer;
+        @include allmedia("padding", $paddings-scale);
+        font-family: $font-family-secondary;
+        font-size: $font-size-md;
+        font-weight: 450;
+        @include allmedia("border-radius", $radius-scale);
+        text-align: center;
+        vertical-align: middle;
+        transition-property: color, background-color, font-weight;
+        transition-timing-function: linear;
+        transition-duration: $transition-time;
+      }
+      .scale--selected {
+        font-weight: 550;
+        color: $color-txt-primary;
+        background-color: $color-scale-selected;
+      }
+      canvas {
+        max-width: 100%;
+        overflow: hidden;
+      }
+    }
   }
   &-daily-traffic {
     grid-area: daily-traffic;

@@ -3,6 +3,11 @@
     @extend %icon;
     fill: $color-txt-primary;
     cursor: pointer;
+    transition: fill $transition-time * 5 linear;
+    &:hover {
+      fill: lighten(red, 25%);
+      animation: rotation-lg $transition-time * 3 linear infinite;
+    }
     &-container {
       position: relative;
       .dot {
@@ -21,4 +26,34 @@
     @extend %icon;
     cursor: pointer;
   }
+}
+
+@keyframes rotation-lg {
+	0% {
+		transform: rotate(45deg);
+	}
+	10% {
+		transform: rotate(-45deg);
+	}
+	20% {
+		transform: rotate(30deg);
+	}
+	30% {
+		transform: rotate(-30deg);
+	}
+	40% {
+		transform: rotate(20deg);
+	}
+	50% {
+		transform: rotate(-20deg);
+	}
+	70% {
+		transform: rotate(10deg);
+	}
+	90% {
+		transform: rotate(-10deg);
+	}
+	90% {
+		transform: rotate(0deg);
+	}
 }
