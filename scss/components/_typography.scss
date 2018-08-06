@@ -1,13 +1,13 @@
-.vertical {
-  @include flex($dir: column);
+main {
+  grid-area: main-region;
+  @include grid($rows: repeat(3, auto));
 }
 
-.horizontal {
-  @include flex($dir: row);
+body {
+  @include allmedia("grid-template-columns", $columns-body);
+  @include grid($layout:  "main-header main-header"
+                          "navbar main-region", $align: center, $rows: $rows-body);
 }
-
-
-
 
 .wrapper__main {
   display: grid;

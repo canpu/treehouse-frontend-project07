@@ -1,5 +1,6 @@
 .header {
   @include element("main") {
+    grid-area: main-header;
     background-color: $color-bg-primary-lighter;
     font-family: $font-family-primary;
     height: $height-web-header;
@@ -35,14 +36,15 @@
     color: $color-txt-secondary;
     font-family: $font-family-secondary;
     .wrapper {
+      grid-area: search-wrapper;
       @include flex($dir: row, $align-coaxis: center, $just: flex-end);
-      flex-grow: 10;
       height: 100%;
       background: $color-bg-secondary;
       border-left: 1px solid $color-grid;
       border-bottom: 1px solid $color-grid;
       .searchbox {
         @include allmedia("width", $widths-searchbox);
+        transition: width $transition-time * 2 linear;
         @include allmedia("margin-right", $gutter-searchbox);
         border: 1.25px solid $color-grid;
         border-radius: $radius-md;
@@ -70,9 +72,11 @@
         }
       }
     }
+    @include grid($layout: "page-header search-wrapper", $align: center,
+                  $columns: 1fr 10fr, $rows: $height-web-header);
   }
   @include element("pagetitle") {
-    flex-grow: 1;
+    grid-area: page-header;
     margin: 0;
     font-weight: 400;
     font-size: $font-size-lg;

@@ -1,4 +1,6 @@
 .nav {
+  width: 100%;
+  height: 100%;
   @include allmedia("width", $widths-nav);
   @include grid($align: start);
   @include allmedia("grid-template-columns", $widths-nav);
@@ -32,4 +34,5 @@
       fill: darken($color-txt-primary, 30%);
     }
   }
+  grid-area: navbar;
 }
