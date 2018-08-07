@@ -100,4 +100,7 @@
     margin-top: $gutter-social-card;
     margin-bottom: $gutter-social-card / 4;
   }
+  @include element("member") {
+    grid-area: member-name;
+  }
 }

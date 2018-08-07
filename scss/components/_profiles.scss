@@ -19,6 +19,12 @@
     color: $color-txt-primary;
     font-size: $font-size-md;
   }
+  @include element("member") {
+    width: $img-size;
+    height: $img-size;
+    border-radius: 50%;
+    grid-area: profile;
+  }
 }
 
 @keyframes rotation-sm {

@@ -108,6 +108,10 @@
         	</g>
         </g>
       </symbol>
+
+      <symbol id="icon-arrow" viewBox="0 0 512 512">
+        <polygon points="160,128.4 192.3,96 352,256 352,256 352,256 192.3,416 160,383.6 287.3,256 "/>
+      </symbol>
     </svg>
 
     <header class="header__main">
@@ -194,21 +198,122 @@
           <header class="header__section">
             <h3 class="header__sectiontitle">NEW MEMBERS</h3>
           </header>
+          <ul class="member--list">
+            <li class="member--wrapper">
+              <img class="profile__member" src="images/member-1.jpg" alt="photo of member 1"/>
+              <h4 class="header__member">Victoria Chambers</h4>
+              <a class="member--email" href="mailto: victoria.chambers80@example.com">victoria.chambers80@example.com</a>
+              <span class="member--date">10/15/15</span>
+            </li>
+            <li class="member--wrapper">
+              <img class="profile__member" src="images/member-2.jpg" alt="photo of member 2"/>
+              <h4 class="header__member">Dale Byrd</h4>
+              <a class="member--email" href="mailto: dale.byrd52@example.com">dale.byrd52@example.com</a>
+              <span class="member--date">10/16/15</span>
+            </li>
+            <li class="member--wrapper">
+              <img class="profile__member" src="images/member-3.jpg" alt="photo of member 3"/>
+              <h4 class="header__member">Dawn Wood</h4>
+              <a class="member--email" href="mailto: dawn.wood16@example.com">dawn.wood16@example.com</a>
+              <span class="member--date">10/17/15</span>
+            </li>
+            <li class="member--wrapper">
+              <img class="profile__member" src="images/member-4.jpg" alt="photo of member 4"/>
+              <h4 class="header__member">Dan Oliver</h4>
+              <a class="member--email" href="mailto: dan.oliver82@example.com">dan.oliver82@example.com</a>
+              <span class="member--date">10/18/15</span>
+            </li>
+          </ul>
         </section>
         <section class="section" id="section-recent-activity">
           <header class="header__section">
             <h3 class="header__sectiontitle">RECENT ACTIVITY</h3>
           </header>
+          <ul class="member--list">
+            <li class="member--wrapper">
+              <img class="profile__member" src="images/member-1.jpg" alt="photo of member 1"/>
+              <p class="member--activity">Victoria Chambers commented on YourApp's SEO Tips</p>
+              <p class="member--activity-time">4 hours ago</p>
+              <svg class="member--activity-goto"><use xlink:href="#icon-arrow"></use></svg>
+            </li>
+            <li class="member--wrapper">
+              <img class="profile__member" src="images/member-2.jpg" alt="photo of member 2"/>
+              <p class="member--activity">Dale Byrd liked the post Facebook's Changes for 2016</p>
+              <p class="member--activity-time">5 hours ago</p>
+              <svg class="member--activity-goto"><use xlink:href="#icon-arrow"></use></svg>
+            </li>
+            <li class="member--wrapper">
+              <img class="profile__member" src="images/member-3.jpg" alt="photo of member 3"/>
+              <p class="member--activity">Dawn Wood commented on Facebook's Changes for 2016</p>
+              <p class="member--activity-time">5 hours ago</p>
+              <svg class="member--activity-goto"><use xlink:href="#icon-arrow"></use></svg>
+            </li>
+            <li class="member--wrapper">
+              <img class="profile__member" src="images/member-4.jpg" alt="photo of member 4"/>
+              <p class="member--activity">Dan Oliver posted YourApp's SEO Tips</p>
+              <p class="member--activity-time">1 hour ago</p>
+              <svg class="member--activity-goto"><use xlink:href="#icon-arrow"></use></svg>
+            </li>
+          </ul>
         </section>
         <section class="section" id="section-message-user">
           <header class="header__section">
             <h3 class="header__sectiontitle">MESSAGE USER</h3>
           </header>
+          <form class="message--form" method="post" action="index.html">
+            <input id="message--search" type="text" class="message--search" placeholder="Search for User"></input>
+            <textarea id="message" class="message" placeholder="Message for User"></textarea>
+            <button id="message--send" class="button--large" type="submit">SEND</button>
+          </form>
         </section>
         <section class="section" id="section-settings">
           <header class="header__section">
             <h3 class="header__sectiontitle">SETTINGS</h3>
           </header>
+          <form class="settings--form" method="post" action="index.html">
+            <div class="wrapper__email">
+              <label id="label--email" class="settings--description" for="settings--email">Send Email Notifications</label>
+              <input id="settings--email" type="checkbox" class="settings--toggle"></input>
+            </div>
+            <div class="wrapper__privacy">
+              <label id="label--privacy" class="settings--description" for="settings--privacy">Set Profile to Public</label>
+              <input id="settings--privacy" type="checkbox" class="settings--toggle"></input>
+            </div>
+            <select id="settings--time-zone" class="settings--time-zone">
+              <option value="0.0">(GMT) Greenwich Mean Time</option>
+              <option value="1.0">(GMT +1:00) European Central Time</option>
+              <option value="2.0">(GMT +2:00) Eastern European Time</option>
+              <option value="3.0">(GMT +3:00) Eastern African Time</option>
+              <option value="3.5">(GMT +3:30) Middle East Time</option>
+              <option value="4.0">(GMT +4:00) Near East Time</option>
+              <option value="5.0">(GMT +5:00) Pakistan Lahore Time</option>
+              <option value="5.5">(GMT +5:30) India Standard Time</option>
+              <option value="6.0">(GMT +6:00) Bangladesh Standard Time</option>
+              <option value="7.0">(GMT +7:00) Vietnam Standard Time</option>
+              <option value="8.0">(GMT +8:00) China Standard Time</option>
+              <option value="9.0">(GMT +9:00) Japan Standard Time</option>
+              <option value="9.5">(GMT +9:30) Australia Central Time</option>
+              <option value="10.0">(GMT +10:00) Australia Eastern Time</option>
+              <option value="11.0">(GMT +11:00) Solomon Standard Time</option>
+              <option value="12.0">(GMT +12:00) New Zealand Standard Time</option>
+              <option value="-11.0">(GMT -11:00) Midway Islands Time</option>
+              <option value="-10.0">(GMT -10:00) Hawaii Standard Time</option>
+              <option value="-9.0">(GMT -9:00) Alaska Standard Time</option>
+              <option value="-8.0">(GMT -8:00) Pacific Standard Time</option>
+              <option value="-7.0">(GMT -7:00) Mountain Standard Time</option>
+              <option value="-6.0">(GMT -6:00) Central Standard Time	</option>
+              <option value="-5.0">(GMT -5:00) Eastern Standard Time	</option>
+              <option value="-4.0">(GMT -4:00) Puerto Rico and US Virgin Islands Time</option>
+              <option value="-3.5">(GMT -3:30) Canada Newfoundland Time	</option>
+              <option value="-3.0">(GMT -3:00) Argentina Standard Time</option>
+              <option value="-2.0">(GMT -2:00) Brazil Eastern Time</option>
+              <option value="-1.0">(GMT -1:00) Mid-Atlantic Time</option>
+            </select>
+            <div class="wrapper__button">
+              <button id="settings--save" class="button--small" type="submit">SAVE</button>
+              <button id="settings--cancel" class="button--small button--negative" type="submit">CANCEL</button>
+            </div>
+          </form>
         </section>
       </div>
     </main>

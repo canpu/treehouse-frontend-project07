@@ -1,3 +1,40 @@
+.member {
+  @include modifier("list") {
+    padding-left: 0;
+    @include flex($dir: column, $just: center, $align-coaxis: left);
+  }
+  @include modifier("wrapper") {
+    list-style: none;
+    margin-bottom: $gutter-member;
+  }
+  @include modifier("email") {
+    grid-area: email;
+    align-self: start;
+  }
+  @include modifier("date") {
+    grid-area: date;
+  }
+  @include modifier("activity") {
+    grid-area: activity;
+    &-time {
+      grid-area: time;
+    }
+    &-goto {
+      grid-area: goto;
+      width: 30px;
+      height: 30px;
+      fill: $color-bg-primary-lighter;
+      cursor: pointer;
+      transition: fill $transition-time linear,
+                  transform $transition-time linear;
+      &:hover {
+        fill: $color-bg-primary-darker;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
 .section {
   width: 100%;
   @include flex($dir: column, $just: center);
@@ -57,14 +94,29 @@
     @include media("tablet") {
       border-right: 1px solid $color-grid;
     }
+    .member--wrapper {
+      @include grid($layout: "profile member-name date"
+                             "profile email date", $align: center,
+                    $columns: $img-size + $gutter-social-card auto 100px,
+                    $rows: 25px 25px);
+      }
   }
   &-recent-activity {
     grid-area: recent-activity;
+    .member--wrapper {
+      @include grid($layout: "profile activity goto"
+                             "profile time goto", $align: center,
+                    $columns: $img-size + $gutter-social-card auto 50px,
+                    $rows: 25px 25px);
+      }
   }
   &-message-user {
     grid-area: message-user;
     @include media("tablet") {
       border-right: 1px solid $color-grid;
+    }
+    form {
+      position: relative;
     }
   }
   &-settings {
@@ -83,7 +135,6 @@
   font-size: $font-size-lg;
   font-family: $font-family-secondary;
   margin-top: $gutter-social-card / 4;
-  margin-bottom: $gutter-social-card;
 }
 
 .card--social {
@@ -110,4 +161,57 @@
       background-color: $color-bg-primary-darker;
     }
   }
+}
+
+.settings {
+  @include modifier("description") {
+    display: inline-block;
+    width: 250px;
+    font-family: $font-family-secondary;
+    font-size: $font-size-md;
+    margin-top: 10px;
+    height: 35px;
+  }
+  @include modifier("toggle") {
+
+  }
+  @include modifier("time-zone") {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-family: $font-family-secondary;
+    font-size: $font-size-sm;
+    border-radius: $radius-md;
+    transition-property: font-size, box-shadow, color;
+    transition-duration: $transition-time / 4, $transition-time;
+    transition-timing-function: linear;
+    border: 1px solid $color-grid;
+    &:focus {
+      font-size: $font-size-md;
+      outline: none;
+      border: 1px solid $color-bg-primary-lighter;
+      box-shadow: 0 0 1px 1px $color-bg-primary-lighter;
+    }
+  }
+}
+
+.wrapper__button {
+  @include flex($dir: row, $just: space-between, $align-coaxis: center);
+}
+
+.message {
+  @extend %message;
+  resize: none;
+  margin-top: 10px;
+  height: 100px;
+  @include modifier("search") {
+    @extend %message;
+    height: 40px;
+  }
+}
+
+#message--send {
+  position: absolute;
+  bottom: 0;
 }
