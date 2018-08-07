@@ -14,7 +14,7 @@ const hourlyTrafficData = {
   labels: ['00:00', '02:00', '04:00', '06:00', '08:00', '10:00', '12:00', '14:00', '16:00', '18:00', '20:00', '22:00'],
   datasets: [{
     label: "hourly traffic",
-    data: [6, 4, 1, 2, 18, 12, 15, 9, 14, 20, 11, 3],
+    data: [4, 4, 1, 2, 18, 12, 15, 9, 14, 20, 11, 3],
     backgroundColor: "rgba(227, 227, 246, 0.75)",
     lineTension: 0,
     pointBorderColor: "rgb(115, 119, 191)",
@@ -49,8 +49,8 @@ const weeklyTrafficData = {
 const monthlyTrafficData = {
   labels: ['Jan', "Feb", "March", "May", "April", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
   datasets: [{
-    label: "weekly traffic",
-    data: [5043, 6371, 4102, 6250, 3750, 6258, 3936, 7812, 5286, 4721, 5842, 6792],
+    label: "monthly traffic",
+    data: [5243, 6371, 4102, 6250, 3750, 6258, 3936, 7812, 5286, 4721, 5842, 6792],
     backgroundColor: "rgba(227, 227, 246, 0.75)",
     lineTension: 0,
     pointBorderColor: "rgb(115, 119, 191)",

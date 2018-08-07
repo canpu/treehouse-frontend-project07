@@ -26,6 +26,20 @@
     @extend %icon;
     cursor: pointer;
   }
+  @include element("social") {
+    max-width: $social-size;
+    max-height: $social-size;
+    fill: $color-txt-primary;
+    &-container {
+      @include flex($dir: row, $just: center, $align-coaxis: center)
+      width: $social-container-size;
+      height: $social-container-size;
+      grid-area: icon-social;
+      background-color: $color-bg-primary-lighter;
+      border-radius: 50%;
+      transition: background-color $transition-time linear;
+    }
+  }
 }
 
 @keyframes rotation-lg {

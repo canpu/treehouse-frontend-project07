@@ -5,7 +5,7 @@
   &:not(:first-of-type) {
     border-top: 1px solid $color-grid;
   }
-  @include grid($rows: $height-section-header auto);
+  @include grid($rows: $height-section-header auto, $columns: 100%);
 }
 
 #section {
@@ -69,5 +69,45 @@
   }
   &-settings {
     grid-area: settings;
+  }
+}
+
+.wrapper__social {
+  @include flex($dir: row, $just: space-between, $align-coaxis: center, $wrap: wrap);
+  width: 100%;
+}
+
+.data--social {
+  grid-area: data-social;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-family: $font-family-secondary;
+  margin-top: $gutter-social-card / 4;
+  margin-bottom: $gutter-social-card;
+}
+
+.card--social {
+  background-color: $color-bg-secondary;
+  width: $width-social-card;
+  border: 1px solid $color-grid;
+  border-radius: $radius-lg;
+  margin-bottom: $gutter-social-card;
+  margin-right: $gutter-social-card;
+  margin-left: $gutter-social-card;
+  flex-grow: 1;
+  @include grid($layout: "icon-social header-social"
+                         "icon-social data-social", $align: center,
+                $columns: 66% 33%);
+  padding-left: $padding-social-card-horizontal;
+  padding-right: $padding-social-card-horizontal;
+  transition-property: background-color, box-shadow;
+  transition-duration: $transition-time;
+  transition-timing-function: linear;
+  &:hover {
+    background-color: darken($color-bg-secondary, 15%);
+    box-shadow: 0 0 0 3px darken($color-grid, 45%);
+    .icon__social-container {
+      background-color: $color-bg-primary-darker;
+    }
   }
 }

@@ -711,6 +711,16 @@ body, main {
   font-family: "Open Sans", sans-serif;
 }
 
+/* line 51, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.header__social {
+  grid-area: header-social;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 24px;
+  margin-top: 15px;
+  margin-bottom: 3.75px;
+}
+
 /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_navigation.scss */
 .nav {
   width: 100%;
@@ -878,6 +888,27 @@ body, main {
   cursor: pointer;
 }
 
+/* line 51, F:/Github/treehouse-frontend-project07/scss/utilities/_mixins.scss */
+.icon__social {
+  max-width: 40px;
+  max-height: 40px;
+  fill: white;
+}
+
+/* line 33, F:/Github/treehouse-frontend-project07/scss/components/_images.scss */
+.icon__social-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  grid-area: icon-social;
+  background-color: #7477bf;
+  border-radius: 50%;
+  transition: background-color 0.5s linear;
+}
+
 @keyframes rotation-lg {
   0% {
     transform: rotate(45deg);
@@ -935,6 +966,7 @@ body, main {
   padding: 5px;
   display: grid;
   grid-template-rows: 40px auto;
+  grid-template-columns: 100%;
 }
 
 @media (min-width: 768px) {
@@ -1084,6 +1116,58 @@ body, main {
 /* line 70, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
 #section-settings {
   grid-area: settings;
+}
+
+/* line 75, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+.wrapper__social {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* line 80, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+.data--social {
+  grid-area: data-social;
+  text-align: center;
+  font-size: 24px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 3.75px;
+  margin-bottom: 15px;
+}
+
+/* line 89, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+.card--social {
+  background-color: whitesmoke;
+  width: 350px;
+  border: 1px solid #d7d7d7;
+  border-radius: 7.5px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+  flex-grow: 1;
+  display: grid;
+  grid-template-areas: "icon-social header-social" "icon-social data-social";
+  grid-template-columns: 66% 33%;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+  transition-property: background-color, box-shadow;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+/* line 106, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+.card--social:hover {
+  background-color: #cfcfcf;
+  box-shadow: 0 0 0 3px #646464;
+}
+
+/* line 109, F:/Github/treehouse-frontend-project07/scss/components/_sections.scss */
+.card--social:hover .icon__social-container {
+  background-color: #4d4c72;
 }
 
 /* line 1, F:/Github/treehouse-frontend-project07/scss/components/_alert.scss */

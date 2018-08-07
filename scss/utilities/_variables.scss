@@ -31,6 +31,8 @@ $gutter-searchbox: (
   'desktop': 40px,
 );
 $gutter-alert-slide: 15px;
+$gutter-social-card: 15px;
+$padding-social-card-horizontal: 30px;
 $margin-searchbox: 10px;
 $height-searchbox: 30px;
 $height-web-header: 55px;
@@ -38,6 +40,7 @@ $height-page-header: 50px;
 $height-section-header: 40px;
 $height-traffic-canvas: 320px;
 $width-hint: 150px;
+$width-social-card: 350px;
 $widths-nav: (
   'mobile': 50px,
   'tablet': 75px,
@@ -93,6 +96,8 @@ $font-size-sm: 12px;
 /* Images */
 $icon-size: 30px;
 $img-size: 40px;
+$social-size: 40px;
+$social-container-size: 70px;
 
 /* Animation */
 $transition-time: 0.5s;

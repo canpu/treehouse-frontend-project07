@@ -92,4 +92,12 @@
     font-weight: normal;
     font-family: $font-family-primary;
   }
+  @include element("social") {
+    grid-area: header-social;
+    text-align: center;
+    font-family: $font-family-secondary;
+    font-size: $font-size-lg;
+    margin-top: $gutter-social-card;
+    margin-bottom: $gutter-social-card / 4;
+  }
 }
