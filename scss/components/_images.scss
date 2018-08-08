@@ -9,16 +9,17 @@
       animation: rotation-lg $transition-time * 3 linear infinite;
     }
     &-container {
+      overflow: visible;
       position: relative;
       .dot {
-        display: inline-block;
-        position: absolute;
-        top: -4px;
-        right: -4px;
-        width: 8px;
-        height: 8px;
-        background: $color-scale-selected;
-        border-radius: 50%;
+        @include modifier("green") {
+          @extend %dot;
+          background-color: $color-scale-selected;
+        }
+        @include modifier("red") {
+          @extend %dot;
+          background-color: lighten(red, 25%);
+        }
       }
     }
   }
@@ -27,8 +28,8 @@
     cursor: pointer;
   }
   @include element("social") {
-    max-width: $social-size;
-    max-height: $social-size;
+    width: $social-size;
+    height: $social-size;
     fill: $color-txt-primary;
     &-container {
       @include flex($dir: row, $just: center, $align-coaxis: center)

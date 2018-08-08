@@ -30,19 +30,23 @@ $gutter-searchbox: (
   'tablet': 30px,
   'desktop': 40px,
 );
+$gutter-toggle: 3px;
 $gutter-alert-slide: 15px;
 $gutter-social-card: 15px;
 $gutter-member: 15px;
 $padding-social-card-horizontal: 30px;
 $margin-searchbox: 10px;
+$height-toggle: 30px;
 $height-searchbox: 30px;
 $height-web-header: 55px;
 $height-page-header: 50px;
 $height-section-header: 40px;
 $height-traffic-canvas: 320px;
 $height-button: 50px;
+$width-alert: 250px;
 $width-hint: 150px;
 $width-social-card: 350px;
+$width-toggle: 100px;
 $widths-nav: (
   'mobile': 50px,
   'tablet': 75px,
@@ -58,6 +62,7 @@ $widths-alert-slide: (
   'tablet': 96%,
   'desktop': 94.5%,
 );
+$size-toggle: 24px;
 $paddings-scale: (
   'mobile': 5px,
   'tablet': 10px,

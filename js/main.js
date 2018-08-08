@@ -1,9 +1,29 @@
-/* Hidding the Alert Message */
+/* Alert Messages */
 const animationTime = 500;
 const $alertSlide = $(".alert__slide");
+const $slideCloser = $("#slide-closer");
 const $alertCloser = $(".button--close");
-$alertCloser.click(function () {
+const $alertContainer = $(".alert__container");
+const $alertDot = $(".dot--red");
+$slideCloser.click(function () {
   $alertSlide.slideUp(animationTime);
+});
+var numOfUnreadMsg = 3;
+$alertCloser.click(function (event) {
+  let target = event.target;
+  let wrapper = target.parentNode;
+  $(wrapper).slideUp();
+  numOfUnreadMsg--;
+  if (numOfUnreadMsg == 0) {
+    $("#alert__container").text("You have read all messages.");
+    $alertDot.removeClass("dot--red").addClass("dot--green");
+  }
+});
+$(".icon__alert").click(function (event) {
+  if ($alertContainer.is(':visible'))
+    $alertContainer.slideUp(animationTime);
+  else
+    $alertContainer.slideDown(animationTime);
 });
 
 /* Traffic */
@@ -260,4 +280,99 @@ var mobileChart = new Chart(mobileDrawing, {
     },
     segmentShowStroke: false,
   }
+});
+
+/* Settings */
+var initialEmailSetting = localStorage.getItem("setting-email");
+var initialPrivacySetting = localStorage.getItem("setting-privacy");
+var initialTimezoneSetting = localStorage.getItem("setting-timezone");
+function reset() {
+  if (initialEmailSetting === "on")
+    $("#settings--email").prop("checked", true);
+  else
+    $("#settings--email").prop("checked", false);
+  if (initialPrivacySetting === "on")
+    $("#settings--privacy").prop("checked", true);
+  else
+    $("#settings--privacy").prop("checked", false);
+  if (initialTimezoneSetting !== null)
+    $("#settings--time-zone").val(initialTimezoneSetting);
+}
+reset();
+$("#settings--save").click(function (event) {
+  event.preventDefault();
+  if ($("#settings--email").is(":checked"))
+    localStorage.setItem("setting-email", "on");
+  else
+    localStorage.setItem("setting-email", "off");
+  if ($("#settings--privacy").is(":checked"))
+    localStorage.setItem("setting-privacy", "on");
+  else
+    localStorage.setItem("setting-privacy", "off");
+  localStorage.setItem("setting-timezone", $("#settings--time-zone option:selected").val());
+  initialEmailSetting = localStorage.getItem("setting-email");
+  initialPrivacySetting = localStorage.getItem("setting-privacy");
+  initialTimezoneSetting = localStorage.getItem("setting-timezone");
+});
+$("#settings--cancel").click(function (event) {
+  event.preventDefault();
+  reset();
+});
+
+/* User Searchbox */
+const $searchbox = $("#message--search");
+const $members = $("#section-new-members .header__member");
+$searchbox.on("input", event => {
+  $("#users-container").empty();
+  if ($searchbox.val().length > 0) {
+    for (let index = 0; index < $members.length; index++) {
+      let member = $members[index];
+      let name = member.textContent.toLowerCase();
+      if (name.indexOf($searchbox.val().toLowerCase()) != -1) {
+        $("#users-container").append(`<p class="autocomplete-item">${member.textContent}</p>`);
+      }
+    }
+    if ($("#users-container .autocomplete-item").length > 0)
+      $("#users-container").addClass("users-container-nonempty");
+    else
+      $("#users-container").removeClass("users-container-nonempty");
+  }
+});
+
+$("#users-container").on("click", event => {
+  let name = event.target.textContent;
+  if (name.length > 0) {
+    $searchbox.val(event.target.textContent);
+    $("#users-container").empty();
+    $("#users-container").removeClass("users-container-nonempty");
+  }
+});
+
+/* Message */
+$("#message--send").click(event => {
+  event.preventDefault();
+  if ($("#message").val() == "") {
+    $("body").append(`<div class="message--error"><p><strong>Error</strong>: The message cannot be empty.</p></div>`);
+  }
+  else if ($("#message--search").val() == "") {
+    $("body").append(`<div class="message--error"><p><strong>Error</strong>: The user cannot be empty.</p></div>`);
+  }
+  else {
+    let isUserExisting = false;
+    for (let index = 0; index < $members.length; index++) {
+      let member = $members[index];
+      let name = member.textContent.toLowerCase();
+      if (name.indexOf($searchbox.val().toLowerCase()) != -1)
+        isUserExisting = true;
+    }
+    if (!isUserExisting) {
+      $("body").append(`<div class="message--error"><p><strong>Error</strong>: The user does not exist.</p></div>`);
+    }
+    else {
+      $("body").append(`<div class="message--confirmation"><p><strong>Confirmation</strong>: Your message has been sent.</p></div>`);
+    }
+  }
+  window.setTimeout(function () {
+    $(".message--error, .message--confirmation").fadeOut(animationTime);
+  }, 1500);
 });

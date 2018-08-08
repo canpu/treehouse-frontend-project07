@@ -169,11 +169,57 @@
     width: 250px;
     font-family: $font-family-secondary;
     font-size: $font-size-md;
-    margin-top: 10px;
-    height: 35px;
+    height: auto;
   }
   @include modifier("toggle") {
-
+    display: block;
+    cursor: pointer;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    background-color: darken(grey, 10%);
+    width: $width-toggle;
+    height: $height-toggle;
+    outline: none;
+    border-radius: $height-toggle / 2;
+    transition-property: background-color;
+    transition-duration: $transition-time;
+    transition-timing-function: linear;
+    position: relative;
+    &::before {
+      content: "OFF";
+      color: $color-txt-primary;
+      font-size: $font-size-md;
+      position: absolute;
+      transition: right $transition-time linear;
+      right: ($width-toggle - 30px) / 2;
+      top: ($height-toggle - $font-size-md) / 2;
+      vertical-align: middle;
+    }
+    &::after {
+      content: "";
+      width: $size-toggle;
+      height: $size-toggle;
+      border-radius: 50%;
+      background: white;
+      position: absolute;
+      transition-property: left;
+      transition-duration: $transition-time / 2;
+      transition-timing-function: linear;
+      left: $gutter-toggle;
+      top: $gutter-toggle;
+    }
+    &:checked {
+      background-color: darken($color-bg-primary-lighter, 10%);
+      &::before {
+        right: ($width-toggle - 26px) / 2;
+        top: ($height-toggle - $font-size-md) / 2;
+        content: "ON";
+      }
+      &::after {
+        left: $gutter-toggle + $width-toggle - $height-toggle;
+      }
+    }
   }
   @include modifier("time-zone") {
     width: 100%;
@@ -188,7 +234,7 @@
     transition-timing-function: linear;
     border: 1px solid $color-grid;
     &:focus {
-      font-size: $font-size-md;
+      font-size: $font-size-sm + 1px;
       outline: none;
       border: 1px solid $color-bg-primary-lighter;
       box-shadow: 0 0 1px 1px $color-bg-primary-lighter;
@@ -214,4 +260,50 @@
 #message--send {
   position: absolute;
   bottom: 0;
+}
+
+.wrapper {
+  @include element("email") {
+    height: 35px;
+    @include flex($dir: row, $align-coaxis: center);
+  }
+  @include element("privacy") {
+    height: 55px;
+    @include flex($dir: row, $align-coaxis: center);
+  }
+}
+
+#users-container {
+  width: 100%;
+  @include flex($dir: column, $just: flex-start, $align-coaxis: center);
+  z-index: 1;
+  position: absolute;
+  top: 40px;
+  .autocomplete-item {
+    display: block;
+    width: 100%;
+    font-family: $font-family-secondary;
+    font-size: $font-size-sm;
+    padding: 15px 2px;
+    margin: 3px 0;
+    cursor: pointer;
+    transition-duration: $transition-time;
+    transition-timing-function: linear;
+    &:hover {
+      background-color: $color-bg-primary-lighter;
+    }
+  }
+}
+
+.users-container-nonempty {
+  color: $color-txt-primary;
+  border: 1px solid $color-bg-primary-darker;
+  border-radius: $radius-md;
+  background-color: lighten($color-bg-primary-lighter, 15%);
+  transition-duration: $transition-time;
+  transition-timing-function: linear;
+  &:hover {
+    border: 1px solid darken($color-bg-primary-darker, 15%);
+    box-shadow: 0 0 1px 2px lighten($color-bg-primary-lighter, 25%);
+  }
 }
