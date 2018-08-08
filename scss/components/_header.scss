@@ -96,11 +96,15 @@
     grid-area: header-social;
     text-align: center;
     font-family: $font-family-secondary;
-    font-size: $font-size-lg;
     margin-top: $gutter-social-card;
     margin-bottom: $gutter-social-card / 4;
+    font-size: $font-size-md;
   }
   @include element("member") {
     grid-area: member-name;
+    max-width: 175px;
+    @include media("tablet") {
+      max-width: auto;
+    }
   }
 }

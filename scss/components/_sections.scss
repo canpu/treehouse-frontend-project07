@@ -9,10 +9,20 @@
   }
   @include modifier("email") {
     grid-area: email;
-    align-self: start;
+    font-size: $font-size-sm;
+    @include media("tablet") {
+      font-size: $font-size-md;
+    }
   }
   @include modifier("date") {
     grid-area: date;
+    font-size: $font-size-sm;
+    text-align: right;
+    margin-right: 7px;
+    @include media("tablet") {
+      font-size: $font-size-md;
+      margin-right: auto;
+    }
   }
   @include modifier("activity") {
     grid-area: activity;
@@ -21,8 +31,12 @@
     }
     &-goto {
       grid-area: goto;
-      width: 30px;
-      height: 30px;
+      width: 20px;
+      height: 20px;
+      @include media("tablet") {
+        width: 30px;
+        height: 30px;
+      }
       fill: $color-bg-primary-lighter;
       cursor: pointer;
       transition: fill $transition-time linear,
@@ -56,15 +70,19 @@
       .scale--option {
         cursor: pointer;
         @include allmedia("padding", $paddings-scale);
-        font-family: $font-family-secondary;
-        font-size: $font-size-md;
-        font-weight: 450;
         @include allmedia("border-radius", $radius-scale);
         text-align: center;
         vertical-align: middle;
         transition-property: color, background-color, font-weight;
         transition-timing-function: linear;
         transition-duration: $transition-time;
+        font-family: $font-family-secondary;
+        font-size: $font-size-sm;
+        font-weight: normal;
+        @include media("tablet") {
+          font-size: $font-size-md;
+          font-weight: 450;
+        }
       }
       .scale--selected {
         font-weight: 550;
@@ -96,19 +114,31 @@
     }
     .member--wrapper {
       @include grid($layout: "profile member-name date"
-                             "profile email date", $align: center,
-                    $columns: $img-size + $gutter-social-card auto 100px,
-                    $rows: 25px 25px);
+                             "profile email email", $align: center,
+                    $columns: $img-size + $gutter-social-card / 2 auto auto,
+                    $rows: 20px auto);
+      @include media("tablet") {
+        @include grid($layout: "profile member-name date"
+                               "profile email email", $align: center,
+                      $columns: $img-size + $gutter-social-card auto 75px,
+                      $rows: 25px 25px);
       }
+    }
   }
   &-recent-activity {
     grid-area: recent-activity;
     .member--wrapper {
       @include grid($layout: "profile activity goto"
                              "profile time goto", $align: center,
-                    $columns: $img-size + $gutter-social-card auto 50px,
-                    $rows: 25px 25px);
+                    $columns: $img-size + $gutter-social-card auto 20px,
+                    $rows: 45px 25px);
+      @include media("tablet") {
+        @include grid($layout: "profile activity goto"
+                               "profile time goto", $align: center,
+                      $columns: $img-size + $gutter-social-card auto 40px,
+                      $rows: 25px 25px);
       }
+    }
   }
   &-message-user {
     grid-area: message-user;
@@ -122,25 +152,37 @@
   }
   &-settings {
     grid-area: settings;
+    form {
+      @include flex($dir: column, $just: center);
+    }
   }
 }
 
 .wrapper__social {
-  @include flex($dir: row, $just: space-between, $align-coaxis: center, $wrap: wrap);
+  @include flex($dir: row, $just: center, $align-coaxis: center, $wrap: wrap);
+  @include media("tablet") {
+    @include flex($dir: row, $just: space-between, $align-coaxis: center, $wrap: wrap);
+  }
   width: 100%;
 }
 
 .data--social {
   grid-area: data-social;
   text-align: center;
-  font-size: $font-size-lg;
   font-family: $font-family-secondary;
   margin-top: $gutter-social-card / 4;
+  font-size: $font-size-md;
+  @include media("tablet") {
+    font-size: $font-size-lg;
+  }
 }
 
 .card--social {
   background-color: $color-bg-secondary;
-  width: $width-social-card;
+  max-width: $width-social-card * 0.75;
+  @include media("tablet") {
+    max-width: $width-social-card;
+  }
   border: 1px solid $color-grid;
   border-radius: $radius-lg;
   margin-bottom: $gutter-social-card;
@@ -167,7 +209,10 @@
 .settings {
   @include modifier("description") {
     display: inline-block;
-    width: 250px;
+    width: 185px;
+    @include media("tablet") {
+      width: 250px;
+    }
     font-family: $font-family-secondary;
     font-size: $font-size-md;
     height: auto;
@@ -226,7 +271,12 @@
     }
   }
   @include modifier("time-zone") {
-    width: 100%;
+    align-self: center;
+    display: block;
+    width: 80%;
+    @include media("tablet") {
+      width: 100%;
+    }
     height: 50px;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -309,5 +359,12 @@
   &:hover {
     border: 1px solid darken($color-bg-primary-darker, 15%);
     box-shadow: 0 0 1px 2px lighten($color-bg-primary-lighter, 25%);
+  }
+}
+
+.chart {
+  max-width: 95%;
+  @include media("tablet") {
+    max-width: 100%;
   }
 }
