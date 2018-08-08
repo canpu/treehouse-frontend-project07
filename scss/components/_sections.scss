@@ -112,6 +112,7 @@
   }
   &-message-user {
     grid-area: message-user;
+    min-height: 300px;
     @include media("tablet") {
       border-right: 1px solid $color-grid;
     }
@@ -170,6 +171,9 @@
     font-family: $font-family-secondary;
     font-size: $font-size-md;
     height: auto;
+  }
+  @include modifier("form") {
+    margin-top: 30px;
   }
   @include modifier("toggle") {
     display: block;
@@ -250,7 +254,7 @@
   @extend %message;
   resize: none;
   margin-top: 10px;
-  height: 100px;
+  height: 130px;
   @include modifier("search") {
     @extend %message;
     height: 40px;

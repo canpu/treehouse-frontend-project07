@@ -5,8 +5,11 @@ main {
 
 body {
   @include allmedia("grid-template-columns", $columns-body);
-  @include grid($layout:  "main-header main-header"
-                          "navbar main-region", $align: center, $rows: $rows-body);
+  @include grid($layout:  "main-header" "navbar" "main-region", $align: center, $columns: repeat(3, 100%));
+  @include media('tablet') {
+    @include grid($layout:  "main-header main-header"
+                            "navbar main-region", $align: center, $rows: $rows-body);
+  }
 }
 
 .wrapper__main {

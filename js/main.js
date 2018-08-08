@@ -370,6 +370,8 @@ $("#message--send").click(event => {
     }
     else {
       $("body").append(`<div class="message--confirmation"><p><strong>Confirmation</strong>: Your message has been sent.</p></div>`);
+      $("#message").val("");
+      $("#message--search").val("");
     }
   }
   window.setTimeout(function () {
