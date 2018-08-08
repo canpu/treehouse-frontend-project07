@@ -8,6 +8,7 @@ TreeHouse FrontEnd Project 7 - WebApp Dashboard
 ## Brief Introduction
 
 * This webpage is the dashboard of an imaginary app *YourApp*.
+* The page layout is made by CSS grid.
 * The user can view unread messages by clicking the bell with red dot; after dismissing all messages, the red dot will turn green.
 * The user can view the statistics of traffic with selected scale (hourly, daily, weekly or monthly).
 * The user can save his or her settings on local storage.
