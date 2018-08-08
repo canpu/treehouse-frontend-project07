@@ -26,7 +26,6 @@
   }
   @include element("webtitle") {
     grid-area: webtitle;
-    min-width: 120px;
     font-size: $font-size-lg;
     color: $color-txt-primary;
   }
@@ -35,6 +34,7 @@
     height: $height-page-header;
     color: $color-txt-secondary;
     font-family: $font-family-secondary;
+    width: 100%;
     .wrapper {
       grid-area: search-wrapper;
       @include flex($dir: row, $align-coaxis: center, $just: flex-end);
@@ -73,14 +73,14 @@
       }
     }
     @include grid($layout: "page-header search-wrapper", $align: center,
-                  $columns: 1fr 10fr, $rows: $height-web-header);
+                  $columns: 1fr 5fr, $rows: $height-web-header);
   }
   @include element("pagetitle") {
     grid-area: page-header;
     margin: 0;
+    min-width: 130px;
     font-weight: 400;
     font-size: $font-size-lg;
-    min-width: 150px;
     text-align: center;
   }
   @include element("section") {

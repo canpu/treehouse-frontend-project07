@@ -10,12 +10,15 @@ strong {
   font-weight: bolder;
 }
 
-body, main {
+body {
   width: 100%;
   height: 100%;
   max-width: 100vw;
 }
 
+main {
+  max-width: 100vw;
+}
 
 .hide {
   display: none;

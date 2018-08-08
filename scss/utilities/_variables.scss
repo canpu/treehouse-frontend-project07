@@ -11,22 +11,22 @@ $breakpoints: (
 
 /* Sizes */
 $gutters-header: (
-  'mobile': 10px,
+  'mobile': 5px,
   'tablet': 20px,
   'desktop': 40px,
 );
 $gutters-header-profile: (
-  'mobile': 10px,
+  'mobile': 5px,
   'tablet': 15px,
   'desktop': 20px,
 );
 $gutters-nav-item: (
-  'mobile': 15px,
+  'mobile': 10px,
   'tablet': 20px,
   'desktop': 25px,
 );
 $gutter-searchbox: (
-  'mobile': 20px,
+  'mobile': 5px,
   'tablet': 30px,
   'desktop': 40px,
 );
@@ -53,8 +53,8 @@ $widths-nav: (
   'desktop': 100px,
 );
 $widths-searchbox: (
-  'mobile': 150px,
-  'tablet': 200px,
+  'mobile': 100px,
+  'tablet': 175px,
   'desktop': 250px,
 );
 $widths-alert-slide: (
