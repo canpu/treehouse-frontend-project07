@@ -67,6 +67,7 @@
   border-radius: $radius-lg;
   width: 250px;
   height: 100px;
+  z-index: 100;
   @include flex($dir: row, $align-coaxis: center, $just: center);
   color: $color-txt-primary;
   & p {

@@ -10,7 +10,7 @@
                   $rows: repeat(2, auto), $align: center,
                   $columns: 2fr 1fr 1fr, $just: center);
     @include media("tablet") {
-      @include grid($layout: "webtitle icon-alert profile-self", $rows: $height-web-header - $padding-main-header * 2);
+      @include grid($layout: "webtitle icon-alert profile-self", $rows: $height-web-header - $padding-main-header * 2, $just: stretch);
       height: $height-web-header;
     }
     @include allmedia("grid-template-columns", $columns-main-header);

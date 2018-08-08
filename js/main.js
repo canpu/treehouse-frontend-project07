@@ -297,6 +297,8 @@ function reset() {
     $("#settings--privacy").prop("checked", false);
   if (initialTimezoneSetting !== null)
     $("#settings--time-zone").val(initialTimezoneSetting);
+  else
+    $("#settings--time-zone").val("null");
 }
 reset();
 $("#settings--save").click(function (event) {
