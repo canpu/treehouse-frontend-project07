@@ -11,6 +11,7 @@
     &-container {
       overflow: visible;
       position: relative;
+      align-self: center;
       .dot {
         @include modifier("green") {
           @extend %dot;

@@ -1,12 +1,18 @@
 .header {
   @include element("main") {
+    width: 100%;
     grid-area: main-header;
     background-color: $color-bg-primary-lighter;
     font-family: $font-family-primary;
-    height: $height-web-header;
     @include allmedia("padding-left", $gutters-header);
     @include allmedia("padding-right", $gutters-header);
-    @include grid($layout: "webtitle icon-alert profile-self", $rows: $height-web-header - $padding-main-header * 2);
+    @include grid($layout: "webtitle webtitle webtitle" "icon-alert icon-alert profile-self",
+                  $rows: repeat(2, auto), $align: center,
+                  $columns: 2fr 1fr 1fr, $just: center);
+    @include media("tablet") {
+      @include grid($layout: "webtitle icon-alert profile-self", $rows: $height-web-header - $padding-main-header * 2);
+      height: $height-web-header;
+    }
     @include allmedia("grid-template-columns", $columns-main-header);
     padding-top: $padding-main-header;
     padding-bottom: $padding-main-header;
@@ -28,6 +34,10 @@
     grid-area: webtitle;
     font-size: $font-size-lg;
     color: $color-txt-primary;
+    text-align: center;
+    @include media("tablet") {
+      text-align: left;
+    }
   }
   @include element("page") {
     @include flex($dir: row, $align-coaxis: center);
