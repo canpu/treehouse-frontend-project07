@@ -31,7 +31,11 @@
     width: $width-alert;
     position: absolute;
     top: $icon-size + 10px;
-    left: - $width-alert / 2;
+    left: - $width-alert / 4;
+    @include media("tablet") {
+      top: $icon-size + 10px;
+      left: - $width-alert / 2;
+    }
     padding: $padding-alert-slide;
     @include flex($dir: column, $just: flex-start, $align-coaxis: center);
     display: none;
